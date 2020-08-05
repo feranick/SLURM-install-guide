@@ -6,15 +6,14 @@ sudo apt install slurm-wlm-basic-plugins slurm-wlm-basic-plugins-dev slurm-wlm-d
 
 sudo nano /etc/slurm-llnl/slurm.conf
 
-3. type:
+3. (Re)start slurm using the file restartslurm (attached)
 
-slurmd -C
+4. Test: run using the attached submit.sh file:
 
-and replace the final line of slurm.conf with the output
+sbatch submit.sh
+squeue
 
-4. (Re)start slurm using the file restartslurm (attached)
-
-In case of hangs, run the following:
+P.S. In case of hangs, run the following:
 
 sudo rm -r /var/lib/slurm-llnl/slurm*
 sudo restartslurm 
